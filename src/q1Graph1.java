@@ -2,7 +2,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 import java.util.Scanner;
 
-public class Graph1 {
+public class q1Graph1 {
 
 
     //DFS
@@ -17,7 +17,13 @@ public class Graph1 {
     }
     public static void dfs(int adj[][]){
      boolean vis[]=new boolean[adj.length];
-     dfs(adj,0,vis);
+
+     for(int i=0;i< adj.length;i++){
+         if(!vis[i]){
+             dfs(adj,i,vis);
+             System.out.println();
+         }
+     }
     }
 
 
@@ -55,21 +61,15 @@ public class Graph1 {
             adjMatrix[v2][v1]=1;
         }
 
-        for(int i=0;i<v;i++){
-            for(int j=0;j<v;j++){
-                System.out.print(adjMatrix[i][j]+" ");
-            }
-            System.out.println();
-        }
+//        for(int i=0;i<v;i++){
+//            for(int j=0;j<v;j++){
+//                System.out.print(adjMatrix[i][j]+" ");
+//            }
+//            System.out.println();
+//        }
 
-//        dfs(adjMatrix);
-
-//        bfs(adjMatrix);
-
-
-
-
-
+        dfs(adjMatrix);
+        bfs(adjMatrix);
     }
 
 }

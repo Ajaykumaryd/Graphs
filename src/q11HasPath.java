@@ -1,2 +1,7 @@
-package PACKAGE_NAME;public class HasPath {
+public class q11HasPath {
+
+
+
+
+
 }
